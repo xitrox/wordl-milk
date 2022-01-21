@@ -1,3 +1,4 @@
+# coding=utf-8
 
 from PIL import Image, ImageDraw, ImageFont
 import sys
@@ -6,26 +7,11 @@ left = 0
 top = 80
 padding = 80
 
-print(sys.argv[1])
-if (sys.argv[1]):
+print(len(sys.argv))
+if (len(sys.argv) > 1):
     s = sys.argv[1]
-
-# s = """Wordle 214 2/6
-
-# 🟩⬜⬜🟨⬜
-# 🟩🟩🟩🟩🟩
-# 🟩🟩🟩🟩🟩
-# 🟩🟩🟩🟩🟩
-# 🟩🟩🟩🟩🟩
-# 🟩🟩🟩🟩🟩"""
-
-"""Wordle 216 4/6
-
-⬜🟩🟩⬜⬜
-🟩🟩🟩⬜⬜
-🟨⬜⬜🟨⬜
-🟩🟩🟩🟩🟩"""
-
+else:
+    exit()
 lines = s.split("\n")
 
 out = Image.new("RGBA", (400, 600), (255, 255, 255, 255))
@@ -62,4 +48,4 @@ out = out.resize((160, 240))
 milk.paste(mask, mask=mask)
 milk.paste(out, box=(70, 260))
 
-milk.save('wordle.png')
+milk.save('wordl.png')

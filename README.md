@@ -1,5 +1,7 @@
 # What the hell is this?
 
+![Edinburgh Milk meme with a bragging wordl player](wordl.png)
+
 This script has the sole purpose of combining [wordl](https://www.powerlanguage.co.uk/wordle/) results with the [Milk Edinburgh meme](https://knowyourmeme.com/memes/milk-edinburgh).
 
 I made this for [@stormgrass](https://twitter.com/stormgrass) because he mentioned he wanted something like this in [this Tweet](https://twitter.com/stormgrass/status/1483820497246765058). 
