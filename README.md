@@ -30,4 +30,5 @@ The output image is stored as wordle.png in this directory (and overwritten with
 
 # Attribution
 Twitter Emojis for the boxes are taken from [Twemoji](https://twemoji.twitter.com/).
+
 [Robot Font](https://fonts.google.com/specimen/Roboto) which is under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
