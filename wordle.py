@@ -1,13 +1,13 @@
 # coding=utf-8
 
 from PIL import Image, ImageDraw, ImageFont
+from datetime import date
 import sys
 
 left = 0
 top = 80
 padding = 80
 
-print(len(sys.argv))
 if (len(sys.argv) > 1):
     s = sys.argv[1]
 else:
@@ -23,7 +23,11 @@ green = Image.open('./assets/green.png').convert('RGBA')
 white = Image.open('./assets/white.png').convert('RGBA')
 orange = Image.open('./assets/orange.png').convert('RGBA')
 black = Image.open('./assets/black.png').convert('RGBA')
-mask = Image.open('./assets/mask.png').convert('RGBA')
+
+mask_milk = Image.open('./assets/mask_milk.png').convert('RGBA')
+milk = Image.open('./assets/milk.jpg').convert('RGBA')
+mask_bro = Image.open('./assets/mask_bro.png').convert('RGBA')
+bro = Image.open('./assets/bro.jpg').convert('RGBA')
 
 
 colorBlocks = lines[2:]
@@ -41,11 +45,18 @@ for line in colorBlocks:
     left = 0
     top += padding
 
-milk = Image.open('./assets/milk.jpg').convert('RGBA')
 
 out = out.resize((160, 240))
+bro_out = out.resize((100, 150)).crop((0, 0, 100, 100))
 
-milk.paste(mask, mask=mask)
-milk.paste(out, box=(70, 260))
+box_milk = (70, 260)
+box_bro = (340, 150)
 
-milk.save('wordl.png')
+bro.paste(mask_bro, mask_bro)
+bro.paste(bro_out, box_bro)
+bro.save('wordle_bro_%s.png' % date.today())
+
+milk.paste(mask_milk, mask=mask_milk)
+milk.paste(out, box_milk)
+
+milk.save('wordle_%s.png' % date.today())
