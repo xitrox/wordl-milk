@@ -1,6 +1,6 @@
 # What the hell is this?
 
-![Edinburgh Milk meme with a bragging wordl player](wordl.png)
+![Edinburgh Milk meme with a bragging wordl player](wordle.png)
 
 This script has the sole purpose of combining [wordl](https://www.powerlanguage.co.uk/wordle/) results with the [Milk Edinburgh meme](https://knowyourmeme.com/memes/milk-edinburgh).
 
@@ -16,16 +16,16 @@ You can use any TrueType font you like. Either alter the script to your path or 
 
 # Usage
 
-    python wordl.py "Wordle 216 4/6
+    python wordle.py "Wordle 216 4/6
 
     ⬜🟩🟩⬜⬜
     🟩🟩🟩⬜⬜
     🟨⬜⬜🟨⬜
     🟩🟩🟩🟩🟩"
 
-If that doesn't work for you some reason you can also save the result in a file an pipe it like this:
+If that doesn't work for you some reason you can also save the result in a file and pipe it like this:
 
-    python wordl.py "$(cat result-example.txt)"
+    python wordle.py "$(cat result-example.txt)"
 The output image is stored as wordle.png in this directory (and overwritten without confirmation so be careful!).
 
 # Attribution
